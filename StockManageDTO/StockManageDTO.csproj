@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\StockManageDTO.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\StockManageDTO.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4C3EECBE-83BF-4C25-9B20-37519E8D7BC5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StockManageDTO</RootNamespace>
+    <AssemblyName>StockManageDTO</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\CommonDTO.cs" />
+    <Compile Include="Common\SerialNumber\SerialNumberDTO.cs" />
+    <Compile Include="Company\CompanyDTO.cs" />
+    <Compile Include="Department\DepartmentDTO.cs" />
+    <Compile Include="GRNReturn\GRNReturnDTO.cs" />
+    <Compile Include="GRNReturn\GRNReturnField.cs" />
+    <Compile Include="GRNReturn\GRNReturnGrid.cs" />
+    <Compile Include="GRNReturn\Print\GRNReturnPrintDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GRNReturnPrintDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GRN\GRNDTO.cs" />
+    <Compile Include="GRN\GRNField.cs" />
+    <Compile Include="GRN\GRNGrid.cs" />
+    <Compile Include="GRN\Print\GRNPrintDataSet.cs">
+      <DependentUpon>GRNPrintDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GRN\Print\GRNPrintDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GRNPrintDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IssueNote\IssueNoteDTO.cs" />
+    <Compile Include="IssueNote\IssueNoteField.cs" />
+    <Compile Include="IssueNote\IssueNoteGrid.cs" />
+    <Compile Include="IssueNote\Print\IssueNoteDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IssueNoteDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Item\ItemDTO.cs" />
+    <Compile Include="Login\ConfigDTO.cs" />
+    <Compile Include="Login\LoginDTO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\FinalReport\FinalReportDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FinalReportDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\GRNReturn\Details\GRNReturnDetailsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GRNReturnDetailsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\GRN\Details\GRNDetailsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GRNDetailsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\IssuedItemSummary\IssuedItemSummaryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IssuedItemSummaryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\IssueNoteVoteSummary\IssueNoteVoteSummaryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IssueNoteVoteSummaryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\IssueNote\Details\IssueNoteDetailsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IssueNoteDetailsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ItemDetail\ItemDetailDataSet.cs">
+      <DependentUpon>ItemDetailDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ItemDetail\ItemDetailDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ItemDetailDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReOrderLevel\ReOrderLevelDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReOrderLevelDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\StockValuationSummary\StockValuationSummaryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockValuationSummaryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Unit\UnitDTO.cs" />
+    <Compile Include="User\UserDTO.cs" />
+    <Compile Include="Vendor\VendorDTO.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Search\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GRNReturn\Print\GRNReturnPrintDataSet.xsc">
+      <DependentUpon>GRNReturnPrintDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GRNReturn\Print\GRNReturnPrintDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GRNReturnPrintDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="GRNReturn\Print\GRNReturnPrintDataSet.xss">
+      <DependentUpon>GRNReturnPrintDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GRN\Print\GRNPrintDataSet.xsc">
+      <DependentUpon>GRNPrintDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GRN\Print\GRNPrintDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GRNPrintDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="GRN\Print\GRNPrintDataSet.xss">
+      <DependentUpon>GRNPrintDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="IssueNote\Print\IssueNoteDataSet.xsc">
+      <DependentUpon>IssueNoteDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="IssueNote\Print\IssueNoteDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IssueNoteDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="IssueNote\Print\IssueNoteDataSet.xss">
+      <DependentUpon>IssueNoteDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\FinalReport\FinalReportDataSet.xsc">
+      <DependentUpon>FinalReportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\FinalReport\FinalReportDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FinalReportDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\FinalReport\FinalReportDataSet.xss">
+      <DependentUpon>FinalReportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\GRNReturn\Details\GRNReturnDetailsDataSet.xsc">
+      <DependentUpon>GRNReturnDetailsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\GRNReturn\Details\GRNReturnDetailsDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GRNReturnDetailsDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\GRNReturn\Details\GRNReturnDetailsDataSet.xss">
+      <DependentUpon>GRNReturnDetailsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\GRN\Details\GRNDetailsDataSet.xsc">
+      <DependentUpon>GRNDetailsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\GRN\Details\GRNDetailsDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GRNDetailsDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\GRN\Details\GRNDetailsDataSet.xss">
+      <DependentUpon>GRNDetailsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\IssuedItemSummary\IssuedItemSummaryDataSet.xsc">
+      <DependentUpon>IssuedItemSummaryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\IssuedItemSummary\IssuedItemSummaryDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IssuedItemSummaryDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\IssuedItemSummary\IssuedItemSummaryDataSet.xss">
+      <DependentUpon>IssuedItemSummaryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\IssueNoteVoteSummary\IssueNoteVoteSummaryDataSet.xsc">
+      <DependentUpon>IssueNoteVoteSummaryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\IssueNoteVoteSummary\IssueNoteVoteSummaryDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IssueNoteVoteSummaryDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\IssueNoteVoteSummary\IssueNoteVoteSummaryDataSet.xss">
+      <DependentUpon>IssueNoteVoteSummaryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\IssueNote\Details\IssueNoteDetailsDataSet.xsc">
+      <DependentUpon>IssueNoteDetailsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\IssueNote\Details\IssueNoteDetailsDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IssueNoteDetailsDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\IssueNote\Details\IssueNoteDetailsDataSet.xss">
+      <DependentUpon>IssueNoteDetailsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\ItemDetail\ItemDetailDataSet.xsc">
+      <DependentUpon>ItemDetailDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\ItemDetail\ItemDetailDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ItemDetailDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\ItemDetail\ItemDetailDataSet.xss">
+      <DependentUpon>ItemDetailDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\ReOrderLevel\ReOrderLevelDataSet.xsc">
+      <DependentUpon>ReOrderLevelDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\ReOrderLevel\ReOrderLevelDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReOrderLevelDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\ReOrderLevel\ReOrderLevelDataSet.xss">
+      <DependentUpon>ReOrderLevelDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\StockValuationSummary\StockValuationSummaryDataSet.xsc">
+      <DependentUpon>StockValuationSummaryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\StockValuationSummary\StockValuationSummaryDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StockValuationSummaryDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\StockValuationSummary\StockValuationSummaryDataSet.xss">
+      <DependentUpon>StockValuationSummaryDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

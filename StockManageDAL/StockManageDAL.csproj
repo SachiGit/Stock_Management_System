@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\StockManageDAL.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\StockManageDAL.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C8FA3F67-C664-403E-A6D2-B2A6FF116727}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StockManageDAL</RootNamespace>
+    <AssemblyName>StockManageDAL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.4.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\CommonDAL.cs" />
+    <Compile Include="Common\Department\CommonDepartment.cs" />
+    <Compile Include="Common\Department\CommonDepartmentInterface.cs" />
+    <Compile Include="Common\Form\FormInterface.cs" />
+    <Compile Include="Common\Form\GRNForm.cs" />
+    <Compile Include="Common\Form\GRNReturnForm.cs" />
+    <Compile Include="Common\Form\IssueNoteForm.cs" />
+    <Compile Include="Common\GINNumber\CommonGINNumber.cs" />
+    <Compile Include="Common\GINNumber\CommonGINNumberInterface.cs" />
+    <Compile Include="Common\Items\CommonItemInterface.cs" />
+    <Compile Include="Common\Items\CommonItems.cs" />
+    <Compile Include="Common\SerialNumberList\SerialNoList.cs" />
+    <Compile Include="Common\SerialNumberList\SerialNoListInterface.cs" />
+    <Compile Include="Common\SerialNumber\SerialNo.cs" />
+    <Compile Include="Common\SerialNumber\SerialNoInterface.cs" />
+    <Compile Include="Common\Unit\CommonUnit.cs" />
+    <Compile Include="Common\Unit\CommonUnitInterface.cs" />
+    <Compile Include="Common\Vendor\CommonVendor.cs" />
+    <Compile Include="Common\Vendor\CommonVendorInterface.cs" />
+    <Compile Include="Company\CompanyDAL.cs" />
+    <Compile Include="DBConnection\DBAccess.cs" />
+    <Compile Include="Department\DepartmentDAL.cs" />
+    <Compile Include="GRNReturn\GRNReturnDAL.cs" />
+    <Compile Include="GRNReturn\Print\GRNReturnPrintDAL.cs" />
+    <Compile Include="GRN\GRNDAL.cs" />
+    <Compile Include="GRN\Print\GRNPrintDAL.cs" />
+    <Compile Include="IssueNote\IssueNoteDAL.cs" />
+    <Compile Include="IssueNote\Print\IssueNotePrintDAL.cs" />
+    <Compile Include="Item\ItemDAL.cs" />
+    <Compile Include="Login\ConfigDAL.cs" />
+    <Compile Include="Login\LoginDAL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\FinalReport\FinalReportDAL.cs" />
+    <Compile Include="Reports\GRNReturn\Details\GRNReturnDetailsDAL.cs" />
+    <Compile Include="Reports\GRN\Details\GRNDetailsDAL.cs" />
+    <Compile Include="Reports\IssuedItemSummary\IssuedItemSummaryDAL.cs" />
+    <Compile Include="Reports\IssueNoteVoteSummary\IssueNoteVoteSummaryDAL.cs" />
+    <Compile Include="Reports\IssueNote\Details\IssueNoteDetailsDAL.cs" />
+    <Compile Include="Reports\ItemDetail\ItemDetailDAL.cs" />
+    <Compile Include="Reports\ReOrderLevel\ReOrderLevelDAL.cs" />
+    <Compile Include="Reports\StockValuationSummary\StockValuationSummaryDAL.cs" />
+    <Compile Include="Search\FindDAL.cs" />
+    <Compile Include="Unit\UnitDAL.cs" />
+    <Compile Include="User\UserDAL.cs" />
+    <Compile Include="Vendor\VendorDAL.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\StockManageDTO\StockManageDTO.csproj">
+      <Project>{4c3eecbe-83bf-4c25-9b20-37519e8d7bc5}</Project>
+      <Name>StockManageDTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
